@@ -28,6 +28,7 @@
         </header>
       
             <div class="msger-chat"></div>
+            {{-- <div class="msg-info-time">${date}</div> --}}
         
         <form class="msger-inputarea">
           <input type="text" class="msger-input" oninput="sendTypingEvent()" placeholder="Enter your message...">
@@ -39,6 +40,7 @@
 
       {{-- <script src="{{ html::script('js/chat.js')}}"></script> --}}
       <script src="/js/chat.js"></script>
+      <script src="/js/app.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     
 </body>

@@ -57,4 +57,25 @@ public function chat_with(User $user)
 	return redirect()->route('chat.show', $chat);
 
 }
+
+public function get_users(Chat $chat) 
+{
+	$users = $chat->users;
+
+	return response()->json([
+		'users' => $users
+	]);
+}
+
+public function get_messages(Chat $chat) 
+{
+
+	$messages = $chat->messages()->with('user')->get();
+
+	return response()->json([
+		'messages' => $messages
+	]);
+
+}
+
 }
